@@ -345,13 +345,13 @@ class _SSAPMessageParser(object):
         jsonMessage["messageType"] = _SSAPMessageParser.__message_types[jsonMessage["messageType"]]
         jsonMessage["direction"] = _SSAPMessageParser.__message_directions[jsonMessage["direction"]]
         
-        if (isinstance(jsonMessage["body"], six.string_types)):
+        if (isinstance(jsonMessage["body"], str)):
             # Some ssap messages have a string (and therefore non-json) body. In that case, we'll have to
             # parse it too.
             if(jsonMessage["messageType"] == SSAP_MESSAGE_TYPE.INDICATION) :
                 jsonMessage["body"] = six.b(jsonMessage["body"]).replace(b"\"[", b"[").replace(b"]\"", b"]")
                 
-            jsonMessage["body"] = json.loads(bytes2String(jsonMessage["body"]))
+            jsonMessage["body"] = json.loads(jsonMessage["body"])
         
         if (SSAPEndpoint.hasOkField(jsonMessage) and jsonMessage["body"]["ok"] and 
                 jsonMessage["messageType"] in [SSAP_MESSAGE_TYPE.INSERT, SSAP_MESSAGE_TYPE.UPDATE]) :
