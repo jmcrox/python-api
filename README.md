@@ -2,6 +2,10 @@
 
 *Read this in other languages: [English](README.md), [Spanish](README.es.md).*
 
+## Justification
+
+This fork over https://github.com/Sofia2/python-api repository has been created in order to correct deficiencies of this while running on Python 3.x by not Indra Sistemas S.A. employee.
+
 ## Copyright notice
 
 © 2013-15 Indra Sistemas S.A.
