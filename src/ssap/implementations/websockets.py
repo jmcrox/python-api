@@ -18,6 +18,7 @@ from ssap.utils.logs import LogFactory
 from ssap.utils.datastructures import GenericThreadSafeList
 from ssap.exceptions import InvalidSSAPOperation, SSAPConnectionError
 from ssap.utils.enums import enum
+from ssap.utils.strings import bytes2String
 import logging
 from time import sleep
 
@@ -201,7 +202,7 @@ class WebsocketBasedSSAPEndpoint(SSAPEndpoint):
         '''
         if (len(data.data) == 1):
             return # We might receive some shit after closing the connection. We won't process it.
-        self.__logger.debug("Data received: " + data.data)
+        self.__logger.debug("Data received: " + bytes2String(data.data))
         parsed_message = _SSAPMessageParser.parse(data.data)
         
         # The message content can be modified within the callback. We must copy
