@@ -20,6 +20,6 @@ setup(name="ssap",
       author="Indra Sistemas S.A.",
       author_email="plataformasofia2@indra.es",
       url="http://www.sofia2.org",
-      packages=["ssap", "ssap.implementations", "ssap.utils"],
+      packages=["ssap", "ssap.implementations", "ssap.utils", "ssap.messages", "ssap.tests.utils", "ssap.tests.websockets"],
       package_dir = {"" : "src"}
      )
