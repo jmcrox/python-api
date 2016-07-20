@@ -1,6 +1,10 @@
-# Sofia2, API Java
+# Sofia2, Python API
 
 *Ver en otros idiomas: [Inglés](README.md), [Español](README.es.md).*
+
+## Justificación
+
+Este fork sobre el repositorio https://github.com/Sofia2/python-api se ha creado con la finalidad de corregir las carencias de este durante la ejecución sobre Python 3.x por personal ajeno a Indra Sistemas S.A.
 
 ## Copyright
 
